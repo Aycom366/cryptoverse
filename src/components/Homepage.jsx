@@ -3,21 +3,28 @@ import axios from "axios";
 
 //formatting numnbers
 import { millify } from "millify";
+
+//and design
 import { Typography, Row, Col, Statistic } from "antd";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 //import our thunk to be called here
 import { fetchExhange } from "../Redux/Exchange";
+
+//ant design
 import { LoadingOutlined } from "@ant-design/icons";
+
+//components import
 import { Crytocurrencies, News } from "../components";
 
 const { Title } = Typography;
 
 function Homepage() {
   const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(fetchExhange(10));
+    dispatch(fetchExhange());
   }, [dispatch]);
 
   const exchange = useSelector((state) => state.exchange);
@@ -28,6 +35,8 @@ function Homepage() {
         <LoadingOutlined style={{ fontSize: "5rem" }} />
       </div>
     );
+
+  //intialize this here to be sure data as filled
   const globalState = exchange.exchange.data;
 
   return (
@@ -71,6 +80,8 @@ function Homepage() {
           />
         </Col>
       </Row>
+
+      {/* main coins container */}
       <div className="home-heading-container">
         <Title level={2} className="home-title">
           Top 10 Cryptocurrecies in the world
