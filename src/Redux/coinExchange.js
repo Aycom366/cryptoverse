@@ -2,21 +2,20 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 import axios from "axios";
 
-//the key used in accessing the endpoint
-const header = {
+const coinExchangeUrl = "https://coinranking1.p.rapidapi.com/exchanges";
+
+const coinExchangeHeader = {
   headers: {
     "x-rapidapi-host": "coinranking1.p.rapidapi.com",
     "x-rapidapi-key": "d81cdbe2ddmsh2ac19b2af725c1cp19f3f5jsn8c029f79b4f6",
   },
 };
-// url link
-const url = "https://coinranking1.p.rapidapi.com/coins";
 
-export const fetchExhange = createAsyncThunk(
-  "exchange/fetchExhange",
+export const fetchExchange = createAsyncThunk(
+  "coinExchange.fetchExchange",
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get(url, header);
+      const response = await axios.get(coinExchangeUrl, coinExchangeHeader);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue({ error: error.message });
@@ -26,28 +25,28 @@ export const fetchExhange = createAsyncThunk(
 
 //initialStates
 const initialState = {
-  exchange: null,
   status: "idle",
-  error: "",
+  error: null,
+  coinExchange: null,
 };
 
-export const exchangeSlice = createSlice({
-  name: "exchange",
+export const coinExchange = createSlice({
+  name: "coinExchange",
   initialState,
   extraReducers: {
-    [fetchExhange.pending]: (state) => {
+    [fetchExchange.pending]: (state) => {
       state.status = "loading";
+      state.error = "";
     },
-    [fetchExhange.fulfilled]: (state, { payload, meta }) => {
-      console.log(meta);
-      state.exchange = payload;
+    [fetchExchange.fulfilled]: (state, { payload }) => {
+      state.coinExchange = payload;
       state.status = "success";
     },
-    [fetchExhange.rejected]: (state, action) => {
+    [fetchExchange.rejected]: (state, action) => {
       state.status = "failed";
       state.error = action.error.message;
     },
   },
 });
 
-export default exchangeSlice.reducer;
+export default coinExchange.reducer;

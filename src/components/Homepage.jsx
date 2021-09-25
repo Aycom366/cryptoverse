@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import axios from "axios";
 
 //formatting numnbers
 import { millify } from "millify";
@@ -28,6 +27,16 @@ function Homepage() {
   }, [dispatch]);
 
   const exchange = useSelector((state) => state.exchange);
+
+  if (exchange.error) {
+    return (
+      <div className="loadingContainer">
+        <Title level={3} className="heading">
+          Oops, Data Fetching failed smh.
+        </Title>
+      </div>
+    );
+  }
 
   if (exchange.status !== "success")
     return (
@@ -91,7 +100,7 @@ function Homepage() {
         </Title>
       </div>
       {/* to render only 10 we will be needing a variable prop name it anyting */}
-      <Crytocurrencies simplify />
+      <Crytocurrencies simplified={10} />
 
       <div className="home-heading-container">
         <Title level={2} className="home-title">
@@ -101,7 +110,7 @@ function Homepage() {
           <Link to="/news">News</Link>
         </Title>
       </div>
-      <News simplify />
+      <News simplified={6} />
     </>
   );
 }
