@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Cryptoverse - The Crypto world Web application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of contents
 
-### `yarn start`
+- [Overview](#overview)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Overview
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Solution URL: [solution URL](https://github.com/Aycom366/cryptoverse)
+- Live Site URL: [live site URL](http://cryptoverse-seven.vercel.app/)
 
-### `yarn eject`
+## My process
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Built with
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Semantic HTML5 markup
+- Ant Design (Already made components)
+- [React](https://reactjs.org/) - JS library
+- milify - A javascript library used in formating numbers
+- [moment](https://momentjs.com/) - working with dateTime
+- [Rapid Api](https://rapidapi.com/) - The main API providing information about cryptos
+- [Axios](https://github.com/axios/axios) - fetching data
+- [Redux toolkit](https://redux-toolkit.js.org/) - managing states and data
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### What I learned
+This project is such a great project where I learnt so many new things and added more knowledge to knowledge I have before. Ant Design was the main design system used in developing this app with  css modules. 
+millify which is a javscript library used in formating numbers. the likes of numbes like 2000, 2500 will be formated to 2k 2.5k.
+moment.js momemnt is literally working with DateTime values, head over to their website to explore more about moment
+Rapid Api is basically the core API used in build this project. Rapid Api offers countless API in their web address. They offers informations on cryptocurrecny, life style and all that you cant even think off. I used the Bing search API including the cryptocurrecy API for this project
+Redux toolkit is a state management library used in managing states or data between web applications. The redux toolkit came with mad functionalities to replace the already existing native redux managing state. Redux toolkit is even recommended by the redux teams to use because it is fast and more modernizws.
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Website - [Temitayo](https://temitayo-portfolio.vercel.app/)
+- Frontend Mentor - [@aycom366](https://www.frontendmentor.io/profile/aycom366)
+- Twitter - [@bamigboyeayomi5](https://twitter.com/bamigboyeayomi5)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
